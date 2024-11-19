@@ -80,7 +80,8 @@ nav ul li a {
     box-shadow: 0 6px 12px rgba(74, 56, 212, 0.4); /* Softer and more spread shadow */
     padding: 20px;
     text-align: center;
-    height: 550px; /* Set a consistent height */
+    align-items: center;
+    height: 250px; /* Set a consistent height */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensures even spacing between content */
@@ -96,12 +97,15 @@ nav ul li a {
     text-decoration: none;
 }
 .recipe-card img {
-    width: 100%; /* Ensure the image takes full width of the card */
-    height: 300px; /* Fixed height for uniformity */
+    width: 100px; /* Set a fixed width for the image */
+    height: 100px; /* Set a fixed height to maintain uniformity */
     object-fit: cover; /* Crop the image while maintaining its aspect ratio */
     border-radius: 8px;
     margin-bottom: 15px;
+    padding: 2px;
+    align-items: center;
 }
+
 
 
 .recipe-card p {
