@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ recipe.name }} Recipe</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'recipe_detail.css' %}" />
+  </head>
+
+  <body>
+    <div class="mainframe">
+      {% if recipe.image %}
+      <div id="recipe-image">
+        <img src="{{ recipe.image.url }}" alt="{{ recipe.name }}" />
+      </div>
+      {% endif %}
+
+      <br />
+
+      <h1>{{ recipe.name }} Recipe</h1>
+
+      <br />
+
+      <p>{{ recipe.description|linebreaksbr }}</p>
+
+      <br />
+
+      <ul class="preparation">
+        <li><b>Preparation time:</b> {{ recipe.preparation_time }} minutes</li>
+      </ul>
+
+      <br />
+
+      <ul class="Ingredients">
+        <li id="Ingredients-list">
+          <h2>Ingredients</h2>
+          <br />
+          <ul>
+            {% for ingredient in ingredients_list %}
+            <li>{{ ingredient }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+      <ul class="instructions">
+        <h2>Instructions</h2>
+        <br />
+        <ul>
+          {% for instruction in instructions_list %}
+          <li>{{ instruction|default:"" }}</li>
+          <!-- Avoids None issues -->
+          {% endfor %}
+        </ul>
+      </ul>
+
+      <br />
+
+      <ul class="nutrition">
+        <h2>Nutrition</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Fact</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for key, value in nutrition_dict.items %}
+            <tr>
+              <td>{{ key }}</td>
+              <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </ul>
+
+      <br />
+
+      <div class="back-button-container">
+        <a href="{% url 'recipe_list' %}" class="back-button">Back to Recipes</a>
+      </div>
+      
+    </div>
+  </body>
+</html>

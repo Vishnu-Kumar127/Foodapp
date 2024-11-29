@@ -1,0 +1,127 @@
+/* General Styling */
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e6d8;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 0; /* Remove margin-top to align header content properly */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px; /* Adjust this if needed */
+}
+
+.search-form input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.search-form button {
+    padding: 8px 12px;
+    background-color: hwb(275 42% 8%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #555;
+}
+
+/* Recipe Card Layout */
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-card {
+    background-color: rgba(74, 56, 212, 0.9); /* Add some transparency for a vibrant look */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(74, 56, 212, 0.4); /* Softer and more spread shadow */
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    height: 250px; /* Set a consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing between content */
+}
+
+
+.recipe-card h2 {
+    color: rgb(86, 211, 48);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.recipe-list a{
+    text-decoration: none;
+}
+.recipe-card img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 2px;
+    align-items: center;
+}
+
+
+
+.recipe-card p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .recipe-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-list {
+        grid-template-columns: 1fr;
+    }
+}
