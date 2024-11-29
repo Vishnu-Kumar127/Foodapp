@@ -126,6 +126,8 @@ USE_TZ = True
 # settings.py
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR/ 'static'
 # STATICFILES_DIRS is where you store your static files during development
 STATICFILES_DIRS = [
     BASE_DIR / "static",  # Adjust if your static files are in a different folder
