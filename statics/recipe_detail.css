@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --white: #ffffff;
+    --rose-white: #fff5fa;
+    --eggshell: #f3e6d8;
+    --light-grey: #e4ded8;
+    --wenge-brown: #5f574e;
+    --dark-charcoal: #302d2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit, 'Young Serif', sans-serif;
+    color: var(--wenge-brown);
+}
+
+body {
+    background-color: var(--eggshell);
+}
+
+.mainframe {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 15px;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    background-color: var(--rose-white);
+    border-radius: 12px;
+    box-shadow: 8px 8px 17px rgba(0, 0, 0, 0.244);
+}
+
+#recipe-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+}
+
+#recipe-image img {
+    max-width: 300px;
+    max-height: 500px;
+    border-radius: inherit;
+}
+
+h1 {
+    font-family: 'Young Serif', serif;
+    font-size: 36px;
+    text-align: center;
+    color: var(--dark-charcoal);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #a12f2f;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 16px;
+    color: var(--dark-charcoal);
+    margin-bottom: 8px;
+}
+
+ul li b {
+    font-weight: 600;
+    color: var(--wenge-brown);
+}
+
+ul.preparation {
+    margin-bottom: 20px;
+}
+
+ul.preparation h4 {
+    color: purple;
+}
+
+ul.preparation #Preparation-time {
+    list-style-type: none;
+}
+
+ul.preparation #Preparation-time ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+ul#Ingredients-list {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul.instructions {
+    list-style-type: decimal;
+}
+
+ul.instructions .instruction b {
+    color: #a12f2f;
+}
+
+ul#instructions-heading .instruction {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+footer.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: black;
+    margin-top: 40px;
+}
+
+footer.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: underline;
+}
+
+footer.attribution a:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .mainframe {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .mainframe {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .mainframe {
+        width: 100%;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+  }
+  
+  .back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+}

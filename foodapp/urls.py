@@ -22,7 +22,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('meals.urls')),  # Replace 'myapp' with your app name
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # Serve media files during development
 if settings.DEBUG:
