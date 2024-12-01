@@ -76,7 +76,6 @@ WSGI_APPLICATION = 'foodapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -97,7 +96,6 @@ DATABASES = {
         "postgres://koyeb-adm:QBk5LcD9NTEI@ep-silent-recipe-a2bjsdkb.eu-central-1.pg.koyeb.app/Receipe?options=endpoint%3Dep-silent-recipe-a2bjsdkb&sslmode=require"
     )
 }
-
 # Authentication settings
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
